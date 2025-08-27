@@ -4,9 +4,8 @@ import {entries} from './entries';
 
 let app = setup();
 
-app.use(expressStatic('public'));
-
 app.use(
+    expressStatic('public'),
     entries,
     unhandledRoute(),
     unhandledError(),
