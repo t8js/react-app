@@ -1,9 +1,3 @@
-import {Suspense, lazy} from 'react';
+import {lazy} from 'react';
 
-const LazyIntro = lazy(() => import('./index'));
-
-export const Intro = () => (
-    <Suspense fallback={<p>Loading...</p>}>
-        <LazyIntro/>
-    </Suspense>
-);
+export const Intro = lazy(() => import('./index'));

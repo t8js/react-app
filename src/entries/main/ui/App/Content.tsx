@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, Suspense} from 'react';
 import {useStore} from '@t8/react-store';
 import {useRoute} from '@t8/react-router';
 import {AppContext} from '../AppContext';
@@ -24,8 +24,16 @@ export const Content = () => {
             <body>
                 <div className="layout">
                     <Nav/>
-                    {withRoute('/', <Intro/>)}
-                    {withRoute('/about', <About/>)}
+                    {withRoute('/', (
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <Intro/>
+                        </Suspense>
+                    ))}
+                    {withRoute('/about', (
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <About/>
+                        </Suspense>
+                    ))}
                     <Footer/>
                 </div>
             </body>
