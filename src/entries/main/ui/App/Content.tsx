@@ -19,7 +19,7 @@ export const Content = () => {
                 <meta name="viewport" content="width=device-width"/>
                 <title>{state.title}</title>
                 <link rel="stylesheet" href="/-/main/index.css"/>
-                <link type="image/x-icon" rel="icon" href="/favicon.svg"/>
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
             </head>
             <body>
                 <div className="layout">
