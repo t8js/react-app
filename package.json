@@ -19,7 +19,7 @@
   "author": "axtk",
   "license": "ISC",
   "dependencies": {
-    "@t8/react-router": "^1.0.14",
+    "@t8/react-router": "^1.0.15",
     "@t8/react-store": "^1.0.6",
     "@t8/webapp": "^0.1.0",
     "express": "^5.1.0",
