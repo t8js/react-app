@@ -20,7 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@t8/react-router": "^1.0.15",
-    "@t8/react-store": "^1.0.6",
+    "@t8/react-store": "^1.0.7",
     "@t8/webapp-core": "^0.1.0",
     "express": "^5.1.0",
     "isbot": "^5.1.30",
