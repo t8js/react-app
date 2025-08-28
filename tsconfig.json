@@ -1,7 +1,7 @@
 {
   "include": [
     "src",
-    "node_modules/@t8/webapp"
+    "node_modules/@t8/webapp-core"
   ],
   "compilerOptions": {
     "outDir": "dist",

@@ -1,6 +1,6 @@
 import {renderToPipeableStream} from 'react-dom/server';
 import {isbot} from 'isbot';
-import {Controller, serializeState, servePipeableStream} from '@t8/webapp';
+import {Controller, serializeState, servePipeableStream} from '@t8/webapp-core';
 import type {AppState} from '../types/AppState';
 import {App} from '../ui/App';
 
