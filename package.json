@@ -5,14 +5,14 @@
   "description": "",
   "main": "dist/server/index.js",
   "scripts": {
-    "build": "webapp-build public",
+    "build": "webapp-build src/public",
     "dev": "npm-run-all dev-init init-entries dev-watch",
-    "dev-init": "webapp-build public --init --clean",
-    "dev-rebuild": "webapp-build public --skip-init",
+    "dev-init": "webapp-build src/public --init --clean",
+    "dev-rebuild": "webapp-build src/public --skip-init",
     "dev-watch": "nodemon --watch src -e * --ignore dist --ignore **/public/** --exec \"cross-env NODE_ENV=development npm-run-all dev-rebuild serve\"",
     "init-entries": "node dist/entries/init.js",
     "prod": "cross-env NODE_ENV=production APP_HOST=127.0.0.1 APP_PORT=3000 npm-run-all prod-build init-entries serve",
-    "prod-build": "webapp-build public --clean --silent",
+    "prod-build": "webapp-build src/public --clean --silent",
     "serve": "node dist/server/index.js",
     "start": "npm run dev"
   },

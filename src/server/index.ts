@@ -5,7 +5,7 @@ import {entries} from './entries';
 let app = setup();
 
 app.use(
-    expressStatic('public'),
+    expressStatic('src/public'),
     entries,
     unhandledRoute(),
     unhandledError(),
