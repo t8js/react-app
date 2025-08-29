@@ -1,15 +1,11 @@
 import {renderToPipeableStream} from 'react-dom/server';
 import {isbot} from 'isbot';
 import {Controller, serializeState, servePipeableStream} from '@t8/webapp-core';
+import {titleMap} from '../const/titleMap';
 import type {AppState} from '../types/AppState';
 import {App} from '../ui/App';
 
 const allowedSections = new Set([undefined, 'about']);
-
-const titleMap: Record<string, string> = {
-    'intro': 'Intro',
-    'about': 'About',
-};
 
 export const render: Controller = () => {
     return async (req, res) => {
@@ -21,7 +17,7 @@ export const render: Controller = () => {
         }
 
         let appState: AppState = {
-            title: titleMap[req.params.section ?? 'intro'] ?? 'App',
+            title: titleMap[req.path] ?? 'App',
             counter: 100 + Math.floor(100*Math.random()),
         };
 
