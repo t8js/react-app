@@ -1,5 +1,5 @@
 ```
-npx degit t8js/webapp-react my-app
+npx degit t8js/react-app my-app
 cd my-app
 npm i
 npm start
