@@ -3,4 +3,4 @@ import {render} from './render';
 
 export let server = Router();
 
-server.get('/{:section}', render());
+server.get(['/', '/about', '/sections/:id'], render());

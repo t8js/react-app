@@ -5,11 +5,11 @@ import {titleMap} from '../const/titleMap';
 import type {AppState} from '../types/AppState';
 import {App} from '../ui/App';
 
-const allowedSections = new Set([undefined, 'about']);
-
 export const render: Controller = () => {
     return async (req, res) => {
-        if (!allowedSections.has(req.params.section)) {
+        let {id} = req.params;
+
+        if (id && (!/^\d+$/.test(id) || Number(id) > 2)) {
             res.status(404).send(
                 await req.app.renderStatus?.(req, res, 'unknown_section'),
             );

@@ -15,6 +15,16 @@ export const Nav = () => {
                     <span>About</span>,
                     <A href="/about">About</A>
                 )}
+                {' | '}
+                {withRoute('/sections/1',
+                    <span>Section 1</span>,
+                    <A href="/sections/1">Section 1</A>
+                )}
+                {' | '}
+                {withRoute('/sections/2',
+                    <span>Section 2</span>,
+                    <A href="/sections/2">Section 2</A>
+                )}
             </p>
         </nav>
     );

@@ -5,6 +5,7 @@ import {titleMap} from '../../const/titleMap';
 import {AppContext} from '../AppContext';
 import {About} from '../About/lazy';
 import {Intro} from '../Intro/lazy';
+import {Section} from '../Section/lazy';
 import {Nav} from '../Nav';
 import {Footer} from '../Footer';
 import './index.css';
@@ -33,6 +34,11 @@ export const Content = () => {
                     {withRoute('/about', (
                         <Suspense fallback={<p>Loading...</p>}>
                             <About/>
+                        </Suspense>
+                    ))}
+                    {withRoute(/^\/sections\/(?<id>\d+)\/?$/, ({params}) => (
+                        <Suspense fallback={<p>Loading...</p>}>
+                            <Section id={Number(params.id)}/>
                         </Suspense>
                     ))}
                     <Footer/>
