@@ -1,4 +1,3 @@
-import {Store} from '@t8/react-store';
 import {Router} from '@t8/react-router';
 import type {AppState} from '../../types/AppState';
 import {AppContext} from '../AppContext';
@@ -11,7 +10,7 @@ export type AppProps = {
 
 export const App = ({state, location}: AppProps) => (
     <Router location={location}>
-        <AppContext.Provider value={new Store(state)}>
+        <AppContext.Provider value={state}>
             <Content/>
         </AppContext.Provider>
     </Router>

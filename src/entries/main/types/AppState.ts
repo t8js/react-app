@@ -1,4 +1,3 @@
-export type AppState = {
-    title: string;
-    counter: number;
-};
+import type {toAppState} from '../utils/toAppState';
+
+export type AppState = ReturnType<typeof toAppState>;

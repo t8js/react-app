@@ -2,8 +2,9 @@ import {renderToPipeableStream} from 'react-dom/server';
 import {isbot} from 'isbot';
 import {Controller, serializeState, servePipeableStream} from '@t8/webapp-core';
 import {titleMap} from '../const/titleMap';
-import type {AppState} from '../types/AppState';
+import type {SerializableAppState} from '../types/SerializableAppState';
 import {App} from '../ui/App';
+import {toAppState} from '../utils/toAppState';
 
 export const render: Controller = () => {
     return async (req, res) => {
@@ -16,16 +17,18 @@ export const render: Controller = () => {
             return;
         }
 
-        let appState: AppState = {
+        let state: SerializableAppState = {
             title: titleMap[req.path] ?? 'App',
             counter: 100 + Math.floor(100*Math.random()),
         };
+
+        let app = <App location={req.originalUrl} state={toAppState(state)}/>;
 
         let bot = isbot(req.get('user-agent'));
         let serve = servePipeableStream(req, res);
         let renderingError: unknown;
 
-        let stream = renderToPipeableStream(<App location={req.originalUrl} state={appState}/>, {
+        let stream = renderToPipeableStream(app, {
             onShellReady() {
                 if (!bot) serve(stream, renderingError);
             },
@@ -40,7 +43,7 @@ export const render: Controller = () => {
                 renderingError = error;
             },
             bootstrapModules: ['/-/main/index.js'],
-            bootstrapScriptContent: `window._mainState=${serializeState(appState)};`,
+            bootstrapScriptContent: `window._mainState=${serializeState(state)};`,
             nonce: req.ctx.nonce,
         });
     };

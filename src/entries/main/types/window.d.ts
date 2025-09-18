@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-import {AppState} from './AppState';
+import {SerializableAppState} from './SerializableAppState';
 
 declare global {
     interface Window {
-        _mainState: AppState;
+        _mainState: SerializableAppState;
     }
 }
