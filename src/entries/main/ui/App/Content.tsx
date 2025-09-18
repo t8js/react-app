@@ -1,8 +1,6 @@
-import {useContext, Suspense} from 'react';
-import {useStore} from '@t8/react-store';
+import {Suspense} from 'react';
 import {useRoute} from '@t8/react-router';
 import {titleMap} from '../../const/titleMap';
-import {AppContext} from '../AppContext';
 import {About} from '../About/lazy';
 import {Intro} from '../Intro/lazy';
 import {Section} from '../Section/lazy';
@@ -11,7 +9,6 @@ import {Footer} from '../Footer';
 import './index.css';
 
 export const Content = () => {
-    let [state] = useStore(useContext(AppContext), false);
     let {route, withRoute} = useRoute();
 
     return (
@@ -19,7 +16,7 @@ export const Content = () => {
             <head>
                 <meta charSet="utf-8"/>
                 <meta name="viewport" content="width=device-width"/>
-                <title>{titleMap[route.pathname] ?? state.title}</title>
+                <title>{titleMap[route.pathname]}</title>
                 <link rel="stylesheet" href="/-/main/index.css"/>
                 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
             </head>

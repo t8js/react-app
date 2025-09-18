@@ -1,7 +1,6 @@
 import {renderToPipeableStream} from 'react-dom/server';
 import {isbot} from 'isbot';
 import {Controller, serializeState, servePipeableStream} from '@t8/webapp-core';
-import {titleMap} from '../const/titleMap';
 import type {SerializableAppState} from '../types/SerializableAppState';
 import {App} from '../ui/App';
 import {toAppState} from '../utils/toAppState';
@@ -18,7 +17,6 @@ export const render: Controller = () => {
         }
 
         let state: SerializableAppState = {
-            title: titleMap[req.path] ?? 'App',
             counter: 100 + Math.floor(100*Math.random()),
         };
 
