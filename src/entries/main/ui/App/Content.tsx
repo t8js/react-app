@@ -11,7 +11,7 @@ import {Footer} from '../Footer';
 import './index.css';
 
 export const Content = () => {
-    let [state] = useStore(useContext(AppContext));
+    let [state] = useStore(useContext(AppContext), false);
     let {route, withRoute} = useRoute();
 
     return (
