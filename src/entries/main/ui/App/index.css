@@ -1,4 +1,13 @@
+body {
+    padding: 0;
+    margin: 0;
+}
 .layout {
-    max-width: 36em;
-    margin: 0 auto;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 3em;
+    line-height: 1.05;
+    margin: 0;
 }

@@ -25,23 +25,28 @@ export const Content = () => {
             </head>
             <body>
                 <div className="layout">
-                    <Nav/>
+                    <header>
+                        <h1>React App</h1>
+                        <Nav/>
+                    </header>
                     {withRoute('/', (
                         <Suspense fallback={<p>Loading...</p>}>
                             <Intro/>
+                            <Footer/>
                         </Suspense>
                     ))}
                     {withRoute('/about', (
                         <Suspense fallback={<p>Loading...</p>}>
                             <About/>
+                            <Footer/>
                         </Suspense>
                     ))}
                     {withRoute(/^\/sections\/(?<id>\d+)\/?$/, ({params}) => (
                         <Suspense fallback={<p>Loading...</p>}>
                             <Section id={Number(params.id)}/>
+                            <Footer/>
                         </Suspense>
                     ))}
-                    <Footer/>
                 </div>
             </body>
         </html>

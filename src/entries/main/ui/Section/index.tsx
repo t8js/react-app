@@ -6,8 +6,8 @@ export type SectionProps = {
 
 export const Section = ({id}: SectionProps) => (
     <main>
-        <h1>Section {id}</h1>
-        <p>This is demo content. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h2>Section {id}</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <Counter/>
     </main>
 );

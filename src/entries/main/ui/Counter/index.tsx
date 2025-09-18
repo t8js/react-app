@@ -6,6 +6,5 @@ import './index.css';
 export const Counter = () => (
     <p className="counter">
         <MinusButton/>{' '}<Display/>{' '}<PlusButton/>
-        {' — Interactivity test'}
     </p>
 );
