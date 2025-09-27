@@ -11,10 +11,11 @@
     "dev-rebuild": "webapp-build src/public --skip-init",
     "dev-watch": "nodemon --watch src -e * --ignore **/public/** --exec \"cross-env NODE_ENV=development npm-run-all dev-rebuild serve\"",
     "init-entries": "node dist/entries/init.js",
-    "preversion": "npm run typecheck",
+    "preversion": "npm-run-all typecheck shape",
     "prod": "cross-env NODE_ENV=production APP_HOST=127.0.0.1 APP_PORT=3000 npm-run-all prod-build init-entries serve",
     "prod-build": "webapp-build src/public --clean --silent",
     "serve": "node dist/server/index.js",
+    "shape": "npx codeshape",
     "start": "npm run dev",
     "typecheck": "tsc --noEmit"
   },
