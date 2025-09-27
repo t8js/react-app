@@ -1,3 +1,3 @@
-import {lazy} from 'react';
+import { lazy } from "react";
 
-export const Intro = lazy(() => import('./index'));
+export const Intro = lazy(() => import("./index"));

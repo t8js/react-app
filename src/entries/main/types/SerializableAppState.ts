@@ -1,3 +1,3 @@
 export type SerializableAppState = {
-    counter: number;
+  counter: number;
 };

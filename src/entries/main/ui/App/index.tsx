@@ -1,17 +1,17 @@
-import {Router} from '@t8/react-router';
-import type {AppState} from '../../types/AppState';
-import {AppContext} from '../AppContext';
-import {Content} from './Content';
+import { Router } from "@t8/react-router";
+import type { AppState } from "../../types/AppState";
+import { AppContext } from "../AppContext";
+import { Content } from "./Content";
 
 export type AppProps = {
-    state: AppState;
-    location?: string;
+  state: AppState;
+  location?: string;
 };
 
-export const App = ({state, location}: AppProps) => (
-    <Router location={location}>
-        <AppContext.Provider value={state}>
-            <Content/>
-        </AppContext.Provider>
-    </Router>
+export const App = ({ state, location }: AppProps) => (
+  <Router location={location}>
+    <AppContext.Provider value={state}>
+      <Content />
+    </AppContext.Provider>
+  </Router>
 );

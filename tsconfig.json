@@ -1,15 +1,8 @@
 {
-  "include": [
-    "src",
-    "node_modules/@t8/webapp-core"
-  ],
+  "include": ["src", "node_modules/@t8/webapp-core"],
   "compilerOptions": {
     "outDir": "dist",
-    "lib": [
-      "ESNext",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
