@@ -20,7 +20,7 @@
     "typecheck": "tsc --noEmit"
   },
   "author": "axtk",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@t8/react-router": "^1.0.39",
     "@t8/react-store": "^1.0.23",
