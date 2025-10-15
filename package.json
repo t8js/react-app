@@ -22,16 +22,16 @@
   "author": "axtk",
   "license": "MIT",
   "dependencies": {
-    "@t8/react-router": "^1.0.39",
-    "@t8/react-store": "^1.0.23",
-    "@t8/webapp-core": "^0.1.6",
+    "@t8/react-router": "^1.0.44",
+    "@t8/react-store": "^1.0.27",
+    "@t8/webapp-core": "^0.1.8",
     "express": "^5.1.0",
     "isbot": "^5.1.31",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@t8/webapp-build": "^0.1.8",
+    "@t8/webapp-build": "^0.1.11",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.11",
