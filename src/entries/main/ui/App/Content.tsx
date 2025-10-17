@@ -9,7 +9,7 @@ import { Section } from "../Section/lazy";
 import "./index.css";
 
 export const Content = () => {
-  let { route, withRoute } = useRoute();
+  let { route, at } = useRoute();
 
   return (
     <html lang="en">
@@ -27,21 +27,21 @@ export const Content = () => {
             <Nav />
           </header>
           <div className="content">
-            {withRoute(
+            {at(
               "/",
               <Suspense fallback={<p>Loading...</p>}>
                 <Intro />
                 <Footer />
               </Suspense>,
             )}
-            {withRoute(
+            {at(
               "/about",
               <Suspense fallback={<p>Loading...</p>}>
                 <About />
                 <Footer />
               </Suspense>,
             )}
-            {withRoute(/^\/sections\/(?<id>\d+)\/?$/, ({ params }) => (
+            {at(/^\/sections\/(?<id>\d+)\/?$/, ({ params }) => (
               <Suspense fallback={<p>Loading...</p>}>
                 <Section id={Number(params.id)} />
                 <Footer />
