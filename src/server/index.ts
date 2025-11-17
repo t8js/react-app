@@ -1,6 +1,7 @@
 import { createApp, unhandledError, unhandledRoute } from "@t8/webapp-core";
 import { static as expressStatic } from "express";
-import { entries } from "./entries";
+
+let { entries } = await import("./entries.ts");
 
 let app = createApp();
 

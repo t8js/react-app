@@ -1,6 +1,6 @@
-import { Display } from "./Display";
-import { MinusButton } from "./MinusButton";
-import { PlusButton } from "./PlusButton";
+import { Display } from "./Display.tsx";
+import { MinusButton } from "./MinusButton.tsx";
+import { PlusButton } from "./PlusButton.tsx";
 import "./index.css";
 
 export const Counter = () => (

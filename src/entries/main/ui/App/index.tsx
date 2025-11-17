@@ -1,7 +1,7 @@
 import { Router } from "@t8/react-router";
-import type { AppState } from "../../types/AppState";
-import { AppContext } from "../AppContext";
-import { Content } from "./Content";
+import type { AppState } from "../../types/AppState.ts";
+import { AppContext } from "../AppContext/index.ts";
+import { Content } from "./Content.tsx";
 
 export type AppProps = {
   state: AppState;

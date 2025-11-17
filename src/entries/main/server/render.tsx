@@ -5,9 +5,9 @@ import {
 } from "@t8/webapp-core";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
-import type { SerializableAppState } from "../types/SerializableAppState";
-import { App } from "../ui/App";
-import { toAppState } from "../utils/toAppState";
+import type { SerializableAppState } from "../types/SerializableAppState.ts";
+import { App } from "../ui/App/index.tsx";
+import { toAppState } from "../utils/toAppState.ts";
 
 export const render: Controller = () => {
   return async (req, res) => {

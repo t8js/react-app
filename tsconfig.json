@@ -1,11 +1,13 @@
 {
   "include": ["src", "node_modules/@t8/webapp-core"],
   "compilerOptions": {
+    "noEmit": true,
     "outDir": "dist",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react-jsx",

@@ -1,3 +1,3 @@
 import { lazy } from "react";
 
-export const Section = lazy(() => import("./index"));
+export const Section = lazy(() => import("./index.tsx"));

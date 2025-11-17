@@ -1,7 +1,7 @@
 // Populated automatically during the build phase
-import { server as server0 } from "../entries/main/server";
-
-export const entries = [
-  // main
-  server0,
-];
+export const entries = (
+  await Promise.all([
+    // main
+    import("../entries/main/server/index.ts"),
+  ])
+).map(({ server }) => server);

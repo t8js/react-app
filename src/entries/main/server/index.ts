@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { render } from "./render";
+import { render } from "./render.tsx";
 
 export let server = Router();
 

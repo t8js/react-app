@@ -1,11 +1,11 @@
 import { useRoute } from "@t8/react-router";
 import { Suspense } from "react";
-import { titleMap } from "../../const/titleMap";
-import { About } from "../About/lazy";
-import { Footer } from "../Footer";
-import { Intro } from "../Intro/lazy";
-import { Nav } from "../Nav";
-import { Section } from "../Section/lazy";
+import { titleMap } from "../../const/titleMap.ts";
+import { About } from "../About/lazy.tsx";
+import { Footer } from "../Footer/index.tsx";
+import { Intro } from "../Intro/lazy.tsx";
+import { Nav } from "../Nav/index.tsx";
+import { Section } from "../Section/lazy.tsx";
 import "./index.css";
 
 export const Content = () => {
