@@ -7,13 +7,10 @@
   "type": "module",
   "scripts": {
     "build": "webapp-build src/public",
-    "dev": "npm-run-all dev-init init-entries dev-watch",
-    "dev-init": "webapp-build src/public --init --clean",
-    "dev-rebuild": "webapp-build src/public --skip-init",
-    "dev-watch": "nodemon --watch src -e * --ignore **/public/** --exec \"cross-env NODE_ENV=development npm-run-all dev-rebuild serve\"",
-    "init-entries": "node dist/init/index.js",
+    "dev": "cross-env NODE_ENV=development npm-run-all dev-build serve",
+    "dev-build": "webapp-build src/public --clean --watch",
     "preversion": "npm-run-all typecheck shape",
-    "prod": "cross-env NODE_ENV=production APP_HOST=127.0.0.1 APP_PORT=3000 npm-run-all prod-build init-entries serve",
+    "prod": "cross-env NODE_ENV=production APP_HOST=127.0.0.1 APP_PORT=3000 npm-run-all prod-build serve",
     "prod-build": "webapp-build src/public --clean --silent",
     "serve": "node dist/server/index.js",
     "shape": "npx codeshape",
@@ -32,7 +29,7 @@
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@t8/webapp-build": "^0.1.21",
+    "@t8/webapp-build": "^0.2.0",
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.11",
