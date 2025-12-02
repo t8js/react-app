@@ -6,13 +6,9 @@
   "main": "dist/server/index.js",
   "type": "module",
   "scripts": {
-    "build": "webapp-build src/public",
-    "dev": "cross-env NODE_ENV=development npm-run-all dev-build serve",
-    "dev-build": "webapp-build src/public --clean --watch",
+    "dev": "cross-env NODE_ENV=development webapp-build src/public --clean --watch",
     "preversion": "npm-run-all typecheck shape",
-    "prod": "cross-env NODE_ENV=production APP_HOST=127.0.0.1 APP_PORT=3000 npm-run-all prod-build serve",
-    "prod-build": "webapp-build src/public --clean --silent",
-    "serve": "node dist/server/index.js",
+    "prod": "cross-env NODE_ENV=production APP_HOST=127.0.0.1 APP_PORT=3000 webapp-build src/public --clean --silent",
     "shape": "npx codeshape",
     "start": "npm run dev",
     "typecheck": "tsc --noEmit"
