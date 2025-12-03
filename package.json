@@ -9,7 +9,7 @@
     "dev": "webapp-dev",
     "preversion": "npm run shape",
     "prod": "webapp-prod 127.0.0.1:3000",
-    "shape": "npx codeshape",
+    "shape": "npx codeshape --typecheck",
     "start": "npm run dev"
   },
   "author": "axtk",
