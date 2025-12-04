@@ -20,8 +20,8 @@
     "@t8/webapp-core": "^0.1.11",
     "express": "^5.2.1",
     "isbot": "^5.1.32",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@t8/webapp-build": "^0.3.1",
