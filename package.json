@@ -17,7 +17,7 @@
   "dependencies": {
     "@t8/react-router": "^1.2.8",
     "@t8/react-store": "^1.0.37",
-    "@t8/webapp-core": "^0.1.11",
+    "@t8/webapp-core": "^0.1.12",
     "express": "^5.2.1",
     "isbot": "^5.1.32",
     "react": "^19.2.1",
