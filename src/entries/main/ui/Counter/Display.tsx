@@ -9,5 +9,9 @@ export const Display = () => {
   // Using <ClientOnly> to avoid flashing server-rendered content
   // before retrieving the store state persistent across page reloads.
   // (Without persistence, <ClientOnly> would be unnecessary here.)
-  return <strong><ClientOnly>{state.counter}</ClientOnly></strong>;
+  return (
+    <strong>
+      <ClientOnly>{state.counter}</ClientOnly>
+    </strong>
+  );
 };
