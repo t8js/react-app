@@ -24,7 +24,7 @@ export const render: Controller = () => {
       counter: 100 + Math.floor(100 * Math.random()),
     };
 
-    let app = <App location={req.originalUrl} state={toAppState(state)} />;
+    let app = <App href={req.originalUrl} state={toAppState(state)} />;
 
     let bot = isbot(req.get("user-agent"));
     let serve = servePipeableStream(req, res);
