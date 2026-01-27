@@ -13,7 +13,7 @@ export const render: Controller = () => {
   return async (req, res) => {
     let { id } = req.params;
 
-    if (id && (!/^\d+$/.test(id) || Number(id) > 2)) {
+    if (typeof id === "string" && (!/^\d+$/.test(id) || Number(id) > 2)) {
       res
         .status(404)
         .send(await req.app.renderStatus?.(req, res, "unknown_section"));
